@@ -1,0 +1,30 @@
+<div class="container">
+  <h4 class="card-title">Registration</h4>
+  <div class="row valign-wrapper">
+    <form [formGroup]="myForm" name="register" class="col s12" novalidate>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" formControlName="Email"  #email>
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password1" name="password1" class="validate" type="password"  formControlName="Password" #password>
+          <label for="password1">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password2"  class="validate" type="password" formControlName="Confirm_Password">
+          <label for="password2">Confirm Password</label>
+        </div>
+        <span *ngIf="useClass">The passwords should be the same</span>
+      </div>
+    </form>
+    </div>
+  <p class="text">You are already a student?<a routerLink="/signin"> Login here!</a></p>
+  <button *ngIf="!useClass" class="btn btn-secondary" (click)="onSubmit();">Apply</button>
+  </div>
+
+<router-outlet></router-outlet>

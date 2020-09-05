@@ -1,0 +1,28 @@
+
+<div *ngIf="!isLoggedIn()" class="navbar-fixed scrolling-navbar">
+    <nav class="nav-wrapper  blue darken-4 scrolling-navbar">
+      <div class="container">
+        <a routerLink="" class="brand-logo">Site Title</a>
+        <a routerLink="" class="sidenav-trigger" data-target="mobile-links">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a routerLink="">Home</a></li>
+          <li><a routerLink="">About</a></li>
+          <li><a routerLink="">Events</a></li>
+          <li><a routerLink="signin" class="btn white blue-text text-darken-4">Login</a></li>
+          <li><a routerLink="register" class="btn white blue-text text-darken-4">Apply</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile-links">
+    <li><a routerLink="">Home</a></li>
+    <li><a routerLink="">About</a></li>
+    <li><a routerLink="">Events</a></li>
+    <li><a routerLink="signin" class="btn white blue-text text-darken-4">Login</a></li>
+    <li><a routerLink="register" class="btn white blue-text text-darken-4">Apply</a></li>
+  </ul>
+
+<router-outlet></router-outlet>
